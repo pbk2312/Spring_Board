@@ -12,15 +12,13 @@ import lombok.*;
 @Builder
 @Getter
 @Setter
-@RequiredArgsConstructor
+@AllArgsConstructor
+@NoArgsConstructor
 public class Member {
 
     @Id
     private String id;
     private String password;
 
-    public Member(String id, String password) {
-        this.id = id;
-        this.password = password;
-    }
+
 }

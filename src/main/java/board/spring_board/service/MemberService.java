@@ -10,6 +10,8 @@ public interface MemberService {
 
     void join(MemberDTO member);
 
+    Member findById(String id);
+
 
 }
 

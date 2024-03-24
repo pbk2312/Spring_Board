@@ -7,6 +7,8 @@ import lombok.RequiredArgsConstructor;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Optional;
+
 @Service
 @RequiredArgsConstructor
 public class MemberServiceImpl implements MemberService {
@@ -17,14 +19,14 @@ public class MemberServiceImpl implements MemberService {
 
 
     @Override
-    public void join(MemberDTO memberDTO){
-        String id = memberDTO.getId();
+    public void join(MemberDTO memberDTO) {
 
 
         Member member = modelMapper.map(memberDTO, Member.class);
 
 
-
         memberRepository.save(member);
     }
+
+
 }
